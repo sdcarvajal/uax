@@ -1,7 +1,6 @@
 steps:
   # Paso 1: Instalar dependencias (opcional)
-  - name: 'gcr.io/cloud-builders/npm'
-    entrypoint: 'npm'
+  - name: 'gcr.io/cloud-builders/npm:$(date +"%Y-%m-%d")'
     args: ['install']
     dir: 'src'
 

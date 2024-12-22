@@ -2,7 +2,8 @@
 variables:
   TODAY: $(date +"%Y-%m-%d")
 steps:
-- name: 'gcr.io/cloud-builders/npm:$${TODAY}'  # Use the variable in the image name
+  # Paso 1: Instalar dependencias (opcional)
+  - name: 'gcr.io/cloud-builders/npm:$${TODAY}'
     args: ['install']
     dir: 'src'
 

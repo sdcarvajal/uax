@@ -1,6 +1,11 @@
-steps:
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy"," — version","20241222t161529", " — no-promote", "app.yaml" ]
+- name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'gcloud'
+    args:
+      - app
+      - deploy
+      - '--version=20241222t161529' # Especifica la versión, cámbialo según tus necesidades
+      - '--quiet'
 
-
-
+# Opciones de compilación
+options:
+  logging: CLOUD_LOGGING_ONLY  # Los logs se almacenan solo en Cloud Logging

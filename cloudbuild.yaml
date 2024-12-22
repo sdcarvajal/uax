@@ -1,9 +1,6 @@
-# Define a variable with the formatted date
-variables:
-  TODAY: $(date +"%Y-%m-%d")
 steps:
   # Paso 1: Instalar dependencias (opcional)
-  - name: 'gcr.io/cloud-builders/npm:$${TODAY}'
+  - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
     dir: 'src'
 

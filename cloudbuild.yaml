@@ -1,6 +1,6 @@
 steps:
-- name: "gcr.io/cloud-builders/gcloud”
-args: ["app”, "deploy”,” — version”,”20241222t161529”, " — no-promote”, "app.yaml” ]
-timeout: "1600s”
+- name: "gcr.io/cloud-builders/gcloud"
+args: ["app", "deploy"," — version","20241222t161529", " — no-promote", "app.yaml" ]
+timeout: "1600s"
 
 

@@ -1,6 +1,8 @@
+# Define a variable with the formatted date
+variables:
+  TODAY: $(date +"%Y-%m-%d")
 steps:
-  # Paso 1: Instalar dependencias (opcional)
-  - name: 'gcr.io/cloud-builders/npm:$(date +"%Y-%m-%d")'
+- name: 'gcr.io/cloud-builders/npm:$${TODAY}'  # Use the variable in the image name
     args: ['install']
     dir: 'src'
 

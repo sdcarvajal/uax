@@ -1,12 +1,6 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args:
-    - build
-    - -t
-    - 'gcr.io/pruebauax/hello-world:latest'
-    - -f
-    - './workspace/Dockerfile' 
-    - . 
-options:
-  logging: CLOUD_LOGGING_ONLY
-images: ['gcr.io/pruebauax/hello-world:latest']
+- name: "gcr.io/cloud-builders/gcloud”
+args: ["app”, "deploy”,” — version”,”20241222t161529”, " — no-promote”, "app.yaml” ]
+timeout: "1600s”
+
+

@@ -3,10 +3,10 @@ steps:
   args:
     - build
     - -t
-    - 'gcr.io/entrenamiento1/hello-world:latest'
+    - 'gcr.io/pruebauax/hello-world:latest'
     - -f
     - './workspace/Dockerfile' 
     - . 
 options:
   logging: CLOUD_LOGGING_ONLY
-images: ['gcr.io/entrenamiento1/hello-world:latest']
+images: ['gcr.io/pruebauax/hello-world:latest']

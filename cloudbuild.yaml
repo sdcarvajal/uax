@@ -1,23 +1,23 @@
 steps:
   # Paso 1: Instalar dependencias (opcional)
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:1.10.1'
     args: ['install']
     dir: 'src'
 
   # Paso 2: Ejecutar pruebas (opcional)
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:1.10.1'
     entrypoint: 'npm'
     args: ['test']
     dir: 'src'
 
   # Paso 3: Empaquetar la aplicación (si aplica)
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:1.10.1'
     entrypoint: 'npm'
     args: ['run', 'build']
     dir: 'src'
 
   # Paso 4: Desplegar en Google App Engine
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/cloud-builders/npm:1.10.1'
     entrypoint: 'gcloud'
     args: ['app', 'deploy', '--quiet']
     dir: 'src'
